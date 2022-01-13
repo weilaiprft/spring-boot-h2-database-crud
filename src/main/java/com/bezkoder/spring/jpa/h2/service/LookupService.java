@@ -18,6 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Component
 public class LookupService {
+    private static final Logger logger = LoggerFactory.getLogger(LookupService.class);
+
     @Autowired
 	TutorialRepository gitHubLookupService;
 
