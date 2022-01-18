@@ -3,9 +3,8 @@ package com.bezkoder.spring.jpa.h2.service;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.bezkoder.spring.jpa.h2.repository.TutorialRepository;
-
 import com.bezkoder.spring.jpa.h2.model.Tutorial;
+import com.bezkoder.spring.jpa.h2.repository.TutorialRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -13,12 +12,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * LookupService
  */
+@Slf4j
 @Component
 public class LookupService {
-    private static final Logger logger = LoggerFactory.getLogger(LookupService.class);
 
     @Autowired
 	TutorialRepository gitHubLookupService;
